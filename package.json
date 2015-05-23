@@ -1,0 +1,42 @@
+{
+  "author": "Pedro Assis <pedroassisc@gmail.com> & Talles L <talleslasmar@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/codigonosso/de-busca/issues"
+  },
+  "dependencies": {
+    "normalization": "~1.0.1",
+    "redis": "~0.12.1"
+  },
+  "description": "a Redis-backed Brazilian search engine that indexes and searches text",
+  "devDependencies": {
+    "brazilian-stop-words": "~1.0.1",
+    "mocha": "~2.2.5",
+    "normalization": "~1.0.1",
+    "positions-in-text": "~1.0.0",
+    "rewire": "~2.3.3",
+    "coveralls": "~2.11.2",
+    "istanbul": "~0.3.14"
+  },
+  "keywords": [
+    "Brazil",
+    "Brazilian",
+    "busca",
+    "engine",
+    "index",
+    "keywords",
+    "maquina",
+    "redis",
+    "search"
+  ],
+  "license": "Fair",
+  "main": "./lib/de-busca.js",
+  "name": "de-busca",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codigonosso/de-busca"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.0"
+}
