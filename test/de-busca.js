@@ -1,9 +1,10 @@
 var assert  = require('assert')
-  , Redis   = require('./redis-mock')
-  , DeBusca = require('../lib/de-busca')
+  , mock    = require('./redis-mock')
+  , rewire  = require('rewire')
+  , DeBusca = rewire('../lib/de-busca')
 
 it('should raise an error if id is not an integer', function () {
-  var redis   = new Redis()
+  var redis   = mock.createClient()
     , deBusca = new DeBusca(redis)
 
   assert.throws(function () { deBusca.index() })
@@ -14,21 +15,21 @@ it('should raise an error if id is not an integer', function () {
 })
 
 it('should raise an error if no text is provided', function () {
-  var redis   = new Redis()
+  var redis   = mock.createClient()
     , deBusca = new DeBusca(redis)
 
   assert.throws(function () { deBusca.index(1337) })
 })
 
 it('should return false if there\'s nothing to index', function () {
-  var redis   = new Redis()
+  var redis   = mock.createClient()
     , deBusca = new DeBusca(redis)
 
   assert(!deBusca.index(1, 'Como?'))
 })
 
 it('should index correctly', function () {
-  var redis   = new Redis()
+  var redis   = mock.createClient()
     , deBusca = new DeBusca(redis)
 
   assert(deBusca.index(23, '\
