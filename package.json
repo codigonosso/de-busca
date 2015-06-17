@@ -5,7 +5,7 @@
   },
   "dependencies": {
     "bitap": "^1.0.0",
-    "brazilian-stop-words": "^1.0.1",
+    "brazilian-stop-words": "^2.0.0",
     "index-to-word": "^1.0.0",
     "normalization": "^1.0.1",
     "positions-in-text": "~1.0.0",
