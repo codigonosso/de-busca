@@ -16,6 +16,9 @@ exports.createClient = function () {
         else if (this.db[key].indexOf(value) === -1) this.db[key].push(value)
       }
 
+      // our version of redis' get
+    , get: function (key, callback) { callback(null, this.db[key]) }
+
   }
 
 }
