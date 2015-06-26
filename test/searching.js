@@ -3,6 +3,7 @@ var assert     = require('assert')
   , searching  = require('../lib/searching')
 
 describe('searching', function () {
+
   it('should match one vocabulary word', function (done) {
     var redis = mock.createClient()
       , query = 'Cerejeira é o nome dado a várias espécies de árvores frutíferas originárias da Ásia, algumas frutíferas, outras produtoras de madeira nobre.'
@@ -26,9 +27,7 @@ describe('searching', function () {
     })
 
   })
-})
 
-describe('searching', function () {
   it('should match two vocabulary words', function (done) {
     var redis = mock.createClient()
       , query = 'O cedro-cheiroso (Cedrela odorata), também conhecido pelos nomes vulgares de acaju, cedro-fêmea, cedro-rosa, cedro-espanhol, cedro-vermelho, cedro-mogno e cedro-brasileiro1 é uma árvore da família das meliáceas, com uma ampla distribuição natural, ocorrendo do México a Argentina.'
@@ -52,5 +51,6 @@ describe('searching', function () {
     })
 
   })
+
 })
 

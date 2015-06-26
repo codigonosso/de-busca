@@ -3,22 +3,19 @@ var assert   = require('assert')
   , indexing = require('../lib/indexing')
 
 describe('indexing', function () {
+
   it('should raise an error if no text is provided', function () {
     var redis = mock.createClient()
 
     assert.throws(function () { indexing(redis, 1337) })
   })
-})
 
-describe('indexing', function () {
   it('should return false if there\'s nothing to index', function () {
     var redis = mock.createClient()
 
     assert(!indexing(redis, 1, 'Como?'))
   })
-})
 
-describe('indexing', function () {
   it('should index correctly', function () {
     var redis = mock.createClient()
 
@@ -49,5 +46,6 @@ Falar de amor em Itapuã'))
     assert.deepEqual(redis.db['23:falar'],   [ 10 ])
     assert.deepEqual(redis.db['23:amor'],    [ 11 ])
   })
+
 })
 
