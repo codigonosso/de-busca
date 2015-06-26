@@ -3,18 +3,6 @@ var assert   = require('assert')
   , indexing = require('../lib/indexing')
 
 describe('indexing', function () {
-  it('should raise an error if id is not an integer', function () {
-    var redis = mock.createClient()
-
-    assert.throws(function () { indexing(redis) })
-    assert.throws(function () { indexing(redis, null) })
-    assert.throws(function () { indexing(redis, 4.4) })
-    assert.throws(function () { indexing(redis, '') })
-    assert.throws(function () { indexing(redis, new Date()) })
-  })
-})
-
-describe('indexing', function () {
   it('should raise an error if no text is provided', function () {
     var redis = mock.createClient()
 
