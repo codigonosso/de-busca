@@ -6,20 +6,22 @@ describe('searching', function () {
 
   it('should match one vocabulary word', function (done) {
     var redis = mock.createClient()
-      , query = 'Cerejeira é o nome dado a várias espécies de árvores frutíferas originárias da Ásia, algumas frutíferas, outras produtoras de madeira nobre.'
-      , vocabulary = 'aroeira cedro cerejeira coqueiro ipê jacarandá mogno pau-brasil pinheiro seringueira'
-      , errors = 2
+      , query = 'Visita deve consolidar o Brasil como maior aliado dos EUA na América Latina'
+      , vocabulary ='argentina bolivia brasil chile colombia equador guiana paraguai peru suriname uruguai venezuela'
+      , errors = 0
 
-    redis.db.aroeira       = [ 0 ]
-    redis.db.cedro         = [ 1 ]
-    redis.db.cerejeira     = [ 2 ]
-    redis.db.coqueiro      = [ 3 ]
-    redis.db['ipê']        = [ 4 ]
-    redis.db['jacarandá']  = [ 5 ]
-    redis.db['mogno']      = [ 6 ]
-    redis.db['pau-brasil'] = [ 7 ]
-    redis.db.pinheiro      = [ 8 ]
-    redis.db.seringueira   = [ 9 ]
+    redis.db.argentina = [  0 ]
+    redis.db.bolivia   = [  1 ]
+    redis.db.brasil    = [  2 ]
+    redis.db.chile     = [  3 ]
+    redis.db.colombia  = [  4 ]
+    redis.db.equador   = [  5 ]
+    redis.db.guiana    = [  6 ]
+    redis.db.paraguai  = [  7 ]
+    redis.db.peru      = [  8 ]
+    redis.db.suriname  = [  9 ]
+    redis.db.uruguai   = [ 10 ]
+    redis.db.venezuela = [ 11 ]
 
     searching(redis, query, vocabulary, errors, function (err, ids) {
       assert.ifError(err)
@@ -31,24 +33,26 @@ describe('searching', function () {
 
   it('should match two vocabulary words', function (done) {
     var redis = mock.createClient()
-      , query = 'O cedro-cheiroso (Cedrela odorata), também conhecido pelos nomes vulgares de acaju, cedro-fêmea, cedro-rosa, cedro-espanhol, cedro-vermelho, cedro-mogno e cedro-brasileiro é uma árvore da família das meliáceas, com uma ampla distribuição natural, ocorrendo do México a Argentina.'
-      , vocabulary = 'aroeira cedro cerejeira coqueiro ipê jacarandá mogno pau-brasil pinheiro seringueira'
-      , errors = 2
+      , query = 'Uruguai e Paraguai pedem fim de barreiras não tarifárias no Mercosul'
+      , vocabulary ='argentina bolivia brasil chile colombia equador guiana paraguai peru suriname uruguai venezuela'
+      , errors = 0
 
-    redis.db.aroeira       = [ 0 ]
-    redis.db.cedro         = [ 1 ]
-    redis.db.cerejeira     = [ 2 ]
-    redis.db.coqueiro      = [ 3 ]
-    redis.db['ipê']        = [ 4 ]
-    redis.db['jacarandá']  = [ 5 ]
-    redis.dbmogno          = [ 6 ]
-    redis.db['pau-brasil'] = [ 7 ]
-    redis.db.pinheiro      = [ 8 ]
-    redis.db.seringueira   = [ 9 ]
+    redis.db.argentina = [  0 ]
+    redis.db.bolivia   = [  1 ]
+    redis.db.brasil    = [  2 ]
+    redis.db.chile     = [  3 ]
+    redis.db.colombia  = [  4 ]
+    redis.db.equador   = [  5 ]
+    redis.db.guiana    = [  6 ]
+    redis.db.paraguai  = [  7 ]
+    redis.db.peru      = [  8 ]
+    redis.db.suriname  = [  9 ]
+    redis.db.uruguai   = [ 10 ]
+    redis.db.venezuela = [ 11 ]
 
     searching(redis, query, vocabulary, errors, function (err, ids) {
       assert.ifError(err)
-      assert.deepEqual(ids, [ 1, 6 ])
+      assert.deepEqual(ids, [ 7, 10 ])
       done()
     })
 
