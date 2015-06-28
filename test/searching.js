@@ -22,6 +22,7 @@ describe('searching', function () {
     redis.db.seringueira   = [ 9 ]
 
     searching(redis, query, vocabulary, errors, function (err, ids) {
+      assert.ifError(err)
       assert.deepEqual(ids, [ 2 ])
       done()
     })
@@ -46,6 +47,7 @@ describe('searching', function () {
     redis.db.seringueira   = [ 9 ]
 
     searching(redis, query, vocabulary, errors, function (err, ids) {
+      assert.ifError(err)
       assert.deepEqual(ids, [ 1, 6 ])
       done()
     })
