@@ -31,7 +31,7 @@ describe('searching', function () {
 
   it('should match two vocabulary words', function (done) {
     var redis = mock.createClient()
-      , query = 'O cedro-cheiroso (Cedrela odorata), também conhecido pelos nomes vulgares de acaju, cedro-fêmea, cedro-rosa, cedro-espanhol, cedro-vermelho, cedro-mogno e cedro-brasileiro1 é uma árvore da família das meliáceas, com uma ampla distribuição natural, ocorrendo do México a Argentina.'
+      , query = 'O cedro-cheiroso (Cedrela odorata), também conhecido pelos nomes vulgares de acaju, cedro-fêmea, cedro-rosa, cedro-espanhol, cedro-vermelho, cedro-mogno e cedro-brasileiro é uma árvore da família das meliáceas, com uma ampla distribuição natural, ocorrendo do México a Argentina.'
       , vocabulary = 'aroeira cedro cerejeira coqueiro ipê jacarandá mogno pau-brasil pinheiro seringueira'
       , errors = 2
 
