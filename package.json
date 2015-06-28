@@ -4,6 +4,7 @@
     "url": "https://github.com/codigonosso/de-busca/issues"
   },
   "dependencies": {
+    "async": "^1.2.1",
     "bitap": "^1.0.0",
     "brazilian-stop-words": "^2.0.0",
     "index-to-word": "^1.0.0",
