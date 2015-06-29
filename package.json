@@ -14,7 +14,7 @@
     "redis": "~0.12.1",
     "wagner-fischer": "^1.0.0"
   },
-  "description": "a Redis-backed Brazilian search engine that indexes and searches text",
+  "description": "a Redis-backed Brazilian search engine",
   "devDependencies": {
     "mocha": "~2.2.5",
     "rewire": "~2.3.3",

@@ -6,29 +6,36 @@
 
 # de busca
 
-[![build](https://travis-ci.org/codigonosso/de-busca.png)](https://travis-ci.org/codigonosso/de-busca)
-[![coverage](https://coveralls.io/repos/codigonosso/de-busca/badge.png?branch=master)](https://coveralls.io/r/codigonosso/de-busca?branch=master)
+[![][build-img]][build]
+[![][coverage-img]][coverage]
 
-A [Redis](http://redis.io)-backed Brazilian search engine that [indexes](#indexing) and [searches](#searching) text.
+A [Redis]-backed Brazilian search engine.
+
+[build]:     https://travis-ci.org/codigonosso/de-busca
+[build-img]: https://travis-ci.org/codigonosso/de-busca.png
+
+[coverage]:     https://coveralls.io/r/codigonosso/de-busca?branch=master
+[coverage-img]: https://coveralls.io/repos/codigonosso/de-busca/badge.png?branch=master
+
+[redis]: http://redis.io
+
+## Indexes
+
+There are two types of indexes: *WORD-ONLY* and *WORD-AND-ID*:
+ * WORD-ONLY indexes has a word as key and a set of ids as value (ids of documents that the word appears).
+ * WORD-AND-ID indexes has `word:id` as key and a set of the positions (indexes) that word appears in the document as value.
 
 ## Indexing
 
-Indexing is performed by the [index module](lib/index.js), it receives an integer `id` (the id of the document/tuple/*whatever* being indexed) and its `text`.
+Indexing is performed by the [indexing module][indexing], it receives an `id` and a `text`:
+  1. Extract keywords ([keyword module][keywords]).
+  1. Locate keywords ([positions-in-text package][positions]).
+  1. Persist the values ([persistence module][persistence]).
 
-### 1. Extract keywords ([index/extract-keywords](lib/index/extract-keywords.js))
-
-* Normalizes (downcases, replace diacritics and removes non alphanumeric characters) via [normalization package](http://github.com/tallesl/normalization);
-* Splits the words (simple [`String.split(' ')`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String/split) call);
-* Removes stop words via [brazilian-stop-words package](https://github.com/tallesl/brazilian-stop-words).
-
-### 2. Locate keywords ([index](lib/index.js#L16-17))
-
-* Locates the index of each keyword in the text via [positions-in-text package](https://github.com/tallesl/positions-in-text).
-
-### 3. Persist ([index/persist](lib/index/persist.js))
-
-* Adds to Redis each keyword as key with the `id` as value;
-* Adds to Redis `{id}:{keyword}` key with the keyword's index in text.
+[indexing]:    lib/indexing.js
+[keywords]:    lib/keywords.js
+[positions]:   https://github.com/tallesl/positions-in-text
+[persistence]: lib/persistence.js
 
 ## Searching
 
