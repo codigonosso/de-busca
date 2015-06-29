@@ -9,6 +9,7 @@
     "brazilian-stop-words": "^2.0.0",
     "index-to-word": "^1.0.0",
     "normalization": "^1.0.1",
+    "por-extenso": "^1.0.0",
     "positions-in-text": "~1.0.0",
     "redis": "~0.12.1",
     "wagner-fischer": "^1.0.0"
