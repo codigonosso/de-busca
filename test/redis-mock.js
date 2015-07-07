@@ -18,6 +18,8 @@ function Mock () {
   // our version of redis' get
   this.get = function (key, callback) { callback(null, that.db[key]) }
 
+  this.smembers = this.get
+
 }
 
 // making it a RedisClient
