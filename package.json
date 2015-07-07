@@ -11,6 +11,7 @@
     "normalization": "^1.0.1",
     "por-extenso": "^1.0.0",
     "positions-in-text": "~1.0.0",
+    "q": "^1.4.1",
     "redis": "~0.12.1",
     "wagner-fischer": "^1.0.0"
   },
