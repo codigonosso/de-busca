@@ -6,10 +6,10 @@
   "dependencies": {
     "async": "^1.2.1",
     "bitap": "^1.0.0",
-    "brazilian-stop-words": "^2.0.0",
+    "brazilian-stop-words": "^2.0.1",
     "index-to-word": "^1.0.0",
-    "normalization": "^1.0.1",
-    "por-extenso": "^1.0.0",
+    "normalization": "^1.1.1",
+    "por-extenso": "^1.1.1",
     "positions-in-text": "~1.0.0",
     "q": "^1.4.1",
     "redis": "~0.12.1",
@@ -17,10 +17,10 @@
   },
   "description": "a Redis-backed Brazilian search engine",
   "devDependencies": {
-    "mocha": "~2.2.5",
-    "rewire": "~2.3.3",
     "coveralls": "~2.11.2",
-    "istanbul": "~0.3.14"
+    "istanbul": "^0.3.17",
+    "mocha": "~2.2.5",
+    "rewire": "~2.3.3"
   },
   "keywords": [
     "Brazil",

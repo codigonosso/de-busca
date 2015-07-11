@@ -6,7 +6,7 @@ describe('keywords', function () {
   it('should extract keywords correctly', function () {
     assert.deepEqual(
         keywords('1 é pouco, 2 é bom, 3 é demais.')
-      , [ 'um', 'pouco', 'dois', 'bom', 'três', 'demais' ])
+      , [ 'pouco', 'dois', 'bom', 'três', 'demais' ])
   })
 })
 
