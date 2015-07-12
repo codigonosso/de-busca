@@ -1,5 +1,6 @@
 {
   "author": "Pedro Assis <pedroassisc@gmail.com> & Talles L <talleslasmar@gmail.com>",
+  "bin": "./bin/de-busca.js",
   "bugs": {
     "url": "https://github.com/codigonosso/de-busca/issues"
   },
@@ -7,7 +8,9 @@
     "async": "^1.3.0",
     "bitap": "^1.0.0",
     "brazilian-stop-words": "^2.0.1",
+    "express": "^4.13.1",
     "index-to-word": "^1.0.0",
+    "morgan": "^1.6.1",
     "normalization": "^1.1.1",
     "por-extenso": "^1.1.1",
     "positions-in-text": "~1.0.0",
@@ -34,7 +37,6 @@
     "search"
   ],
   "license": "Fair",
-  "main": "./lib/de-busca.js",
   "name": "de-busca",
   "repository": {
     "type": "git",
