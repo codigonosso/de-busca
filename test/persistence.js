@@ -4,50 +4,44 @@ var assert      = require('assert')
 
 describe('persistence', function () {
 
-  it('shouldn\'t throw if __vocabulary is configured', function (done) {
+  it('shouldn\'t throw if __vocabulary and __errors is configured', function (done) {
     var redis = mock.createClient()
     redis.db.__vocabulary = 'black gray white'
-    persistence.retrieveVocabulary(redis, function (err, vocabulary) {
+    redis.db.__errors     = '2'
+    persistence.retrieve.configuration(redis, function (err, configuration) {
       assert.ifError(err)
-      assert.equal(vocabulary, 'black gray white')
+      assert.equal(configuration.vocabulary, 'black gray white')
+      assert.equal(configuration.errors,     2)
       done()
     })
   })
 
   it('should throw if __vocabulary is not configured', function (done) {
     var redis = mock.createClient()
-    persistence.retrieveVocabulary(redis, function (err, vocabulary) {
+    persistence.retrieve.configuration(redis, function (err, configuration) {
       assert(err)
-      assert.equal(vocabulary, null)
-      done()
-    })
-  })
-
-  it('shouldn\'t raise an error if __errors is a positive integer', function (done) {
-    var redis = mock.createClient()
-    redis.db.__errors = '2'
-    persistence.retrieveErrors(redis, function (err, errors) {
-      assert.ifError(err)
-      assert.equal(errors, 2)
+      assert(!configuration)
       done()
     })
   })
 
   it('should throw if __errors is not a positive integer', function (done) {
     var redis = mock.createClient()
-    redis.db.__errors = 'foo'
-    persistence.retrieveErrors(redis, function (err, errors) {
+    redis.db.__vocabulary = 'black gray white'
+    redis.db.__errors     = 'foo'
+    persistence.retrieve.configuration(redis, function (err, configuration) {
       assert(err)
-      assert.equal(errors, null)
+      assert(!configuration)
       done()
     })
   })
 
   it('should throw if __errors is not configured', function (done) {
     var redis = mock.createClient()
-    persistence.retrieveErrors(redis, function (err, errors) {
+    redis.db.__vocabulary = 'black gray white'
+    persistence.retrieve.configuration(redis, function (err, configuration) {
       assert(err)
-      assert.equal(errors, null)
+      assert(!configuration)
       done()
     })
   })
