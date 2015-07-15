@@ -1,10 +1,11 @@
 #! /usr/bin/env node
 
-var persistence = require('../lib/persistence')
-  , web         = require('../lib/web')
+var client        = require('../lib/persistence/client')
+  , configuration = require('../lib/persistence/configuration')
+  , web           = require('../lib/web')
 
-var redis = persistence.client(exit)
-persistence.retrieve.configuration(redis, function (err, configuration) {
+var redis = client(exit)
+configuration(redis, function (err, configuration) {
 
   if (err) exit(err)
   web(redis, configuration)
