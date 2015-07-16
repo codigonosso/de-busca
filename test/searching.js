@@ -12,18 +12,18 @@ describe('searching', function () {
           , errors:     0
         }
 
-    redis.db.argentina = [  0 ]
-    redis.db.bolivia   = [  1 ]
-    redis.db.brasil    = [  2 ]
-    redis.db.chile     = [  3 ]
-    redis.db.colombia  = [  4 ]
-    redis.db.equador   = [  5 ]
-    redis.db.guiana    = [  6 ]
-    redis.db.paraguai  = [  7 ]
-    redis.db.peru      = [  8 ]
-    redis.db.suriname  = [  9 ]
-    redis.db.uruguai   = [ 10 ]
-    redis.db.venezuela = [ 11 ]
+    redis.db['word:argentina'] = [  0 ]
+    redis.db['word:bolivia']   = [  1 ]
+    redis.db['word:brasil']    = [  2 ]
+    redis.db['word:chile']     = [  3 ]
+    redis.db['word:colombia']  = [  4 ]
+    redis.db['word:equador']   = [  5 ]
+    redis.db['word:guiana']    = [  6 ]
+    redis.db['word:paraguai']  = [  7 ]
+    redis.db['word:peru']      = [  8 ]
+    redis.db['word:suriname']  = [  9 ]
+    redis.db['word:uruguai']   = [ 10 ]
+    redis.db['word:venezuela'] = [ 11 ]
 
     searching(redis, query, configuration, function (err, ids) {
       assert.ifError(err)
@@ -41,18 +41,18 @@ describe('searching', function () {
           , errors:     0
         }
 
-    redis.db.argentina = [  0 ]
-    redis.db.bolivia   = [  1 ]
-    redis.db.brasil    = [  2 ]
-    redis.db.chile     = [  3 ]
-    redis.db.colombia  = [  4 ]
-    redis.db.equador   = [  5 ]
-    redis.db.guiana    = [  6 ]
-    redis.db.paraguai  = [  7 ]
-    redis.db.peru      = [  8 ]
-    redis.db.suriname  = [  9 ]
-    redis.db.uruguai   = [ 10 ]
-    redis.db.venezuela = [ 11 ]
+    redis.db['word:argentina'] = [  0 ]
+    redis.db['word:bolivia']   = [  1 ]
+    redis.db['word:brasil']    = [  2 ]
+    redis.db['word:chile']     = [  3 ]
+    redis.db['word:colombia']  = [  4 ]
+    redis.db['word:equador']   = [  5 ]
+    redis.db['word:guiana']    = [  6 ]
+    redis.db['word:paraguai']  = [  7 ]
+    redis.db['word:peru']      = [  8 ]
+    redis.db['word:suriname']  = [  9 ]
+    redis.db['word:uruguai']   = [ 10 ]
+    redis.db['word:venezuela'] = [ 11 ]
 
     searching(redis, query, configuration, function (err, ids) {
       assert.ifError(err)
