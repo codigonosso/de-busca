@@ -15,7 +15,7 @@
     "index-to-word": "^1.0.0",
     "morgan": "^1.6.1",
     "normalization": "^1.1.1",
-    "por-extenso": "^1.1.1",
+    "por-extenso": "^1.1.2",
     "positions-in-text": "~1.0.0",
     "q": "^1.4.1",
     "redis": "~0.12.1",
