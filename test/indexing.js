@@ -1,5 +1,4 @@
 var assert   = require('assert')
-  , mock     = require('./redis-mock')
   , indexing = require('../lib/indexing')
 
 describe('indexing', function () {
