@@ -9,6 +9,8 @@
 [![][build-img]][build]
 [![][coverage-img]][coverage]
 
+[Fala português?]
+
 A [Redis]-backed Brazilian search engine that indexes (write) and searches (read) text.
 
 [build]:     https://travis-ci.org/codigonosso/de-busca
@@ -16,6 +18,8 @@ A [Redis]-backed Brazilian search engine that indexes (write) and searches (read
 
 [coverage]:     https://coveralls.io/r/codigonosso/de-busca?branch=master
 [coverage-img]: https://coveralls.io/repos/codigonosso/de-busca/badge.png?branch=master
+
+[Fala português?]: README.pt-br.md
 
 [Redis]: http://redis.io
 
