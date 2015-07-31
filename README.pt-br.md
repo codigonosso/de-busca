@@ -38,7 +38,7 @@ Para buscar, utiliza o [algoritmo de Baeza] e de [Wagner–Fischer].
 ## Utilização
 
 Você pode tanto `npm install de-busca -g`, clonar este repositório e executar `bin/de-busca.js` ou fazer deploy no
-Herokuk:
+Heroku:
 
 [![][heroku-img]][heroku]
 
