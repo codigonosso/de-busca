@@ -69,9 +69,9 @@ All operations returns [401] if the provided [authentication] doesn't match `DEB
 ## Configuration
 
 Environment variables:
- * `DEBUSCA_AUTH`: an `user:password` checked when the API is used;
- * `DEBUSCA_REDISPASSWORD`: Redis database password (optional);
- * `DEBUSCA_REDISURL`:  an `redis://host:port` URL (optional, assumes `redis://localhost:6379`).
+ * `AUTH`: an `user:password` checked when the API is used;
+ * `REDIS_PASSWORD`: Redis database password (optional);
+ * `REDIS_URL`:  an `redis://host:port` URL (optional, assumes `redis://localhost:6379`).
 
 Redis keys:
  * `vocabulary`: words (string separated by spaces, not a [set]) that are checked agaisnt when searching;

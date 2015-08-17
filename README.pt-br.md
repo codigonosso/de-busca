@@ -67,9 +67,9 @@ Todas operações retornam [401] se a [autenticação] fornecida não casa com a
 ## Configuração
 
 Variáveis de ambiente:
- * `DEBUSCA_AUTH`: credencias no formato `user:password`;
- * `DEBUSCA_REDISPASSWORD`: senha do Redis (opcional);
- * `DEBUSCA_REDISURL`:  uma URL no formato `redis://host:porta` (opcional, assume `redis://localhost:6379`).
+ * `AUTH`: credencias no formato `user:password`;
+ * `REDIS_PASSWORD`: senha do Redis (opcional);
+ * `REDIS_URL`:  uma URL no formato `redis://host:porta` (opcional, assume `redis://localhost:6379`).
 
 Chaves no Redis:
  * `vocabulary`: palavras (separadas por espaço, não é um [set]) que são casadas na busca;
