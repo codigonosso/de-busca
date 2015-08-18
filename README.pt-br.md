@@ -64,6 +64,14 @@ Todas operações retornam [401] se a [autenticação] fornecida não casa com a
 
 [autenticação]: https://en.wikipedia.org/wiki/Basic_access_authentication
 
+Aqui vai como fazer a requisição através de seu terminal:
+
+```sh
+$ curl example.org/search/some+keywords -i -X GET -u "username:password"
+$ curl example.org/index/1337 -d "some text" -H "Content-Type: text/plain" -i -X PUT -u "username:password"
+$ curl example.org/index/1337 -i -X DELETE -u "username:password"
+```
+
 ## Configuração
 
 Variáveis de ambiente:

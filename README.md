@@ -56,6 +56,14 @@ Here's the API (http):
 
 All operations returns [401] if the provided [authentication] doesn't match `DEBUSCA_AUTH` configuration.
 
+Here's how to request from the cli:
+
+```sh
+$ curl example.org/search/some+keywords -i -X GET -u "username:password"
+$ curl example.org/index/1337 -d "some text" -H "Content-Type: text/plain" -i -X PUT -u "username:password"
+$ curl example.org/index/1337 -i -X DELETE -u "username:password"
+```
+
 [200]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#200
 [201]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#201
 [204]: http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#204
