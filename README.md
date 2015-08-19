@@ -83,7 +83,7 @@ Environment variables:
 
 Redis keys:
  * `vocabulary`: words (string separated by spaces, not a [set]) that are checked agaisnt when searching;
- * `errors`: the *Levenshtein distance* tolerance of the search algorithm (the higher the more tolerant it is).
+ * `errors`: the *Levenshtein distance* tolerance of the search algorithm (the higher the more tolerant it is). Assumes `2` if none is configured.
 
 [AUTH]: http://redis.io/commands/AUTH
 [set]:  http://redis.io/topics/data-types#sets

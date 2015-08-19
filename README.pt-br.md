@@ -81,7 +81,7 @@ Variáveis de ambiente:
 
 Chaves no Redis:
  * `vocabulary`: palavras (separadas por espaço, não é um [set]) que são casadas na busca;
- * `errors`: a distância *Levenshtein* tolerada pelo algoritmo de busca (quanto maior mais tolerante).
+ * `errors`: a distância *Levenshtein* tolerada pelo algoritmo de busca (quanto maior mais tolerante). Assume `2` se não for configurado.
 
 [AUTH]: http://redis.io/commands/AUTH
 [set]:  http://redis.io/topics/data-types#sets
