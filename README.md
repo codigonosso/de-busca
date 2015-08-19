@@ -71,10 +71,12 @@ All operations returns [401] if the provided [authentication] doesn't match `DEB
 Environment variables:
  * `AUTH`: an `user:password` checked when the API is used;
  * `REDIS_PASSWORD`: Redis database password (optional);
- * `REDIS_URL`:  an `redis://host:port` URL (optional, assumes `redis://localhost:6379`).
+ * `REDIS`: a Redis server URL in the format `redis://user:password@host:port`, password is optional and since [AUTH] only asks for a password `user` can be anything.
 
 Redis keys:
  * `vocabulary`: words (string separated by spaces, not a [set]) that are checked agaisnt when searching;
  * `errors`: the *Levenshtein distance* tolerance of the search algorithm (the higher the more tolerant it is).
 
-[set]: http://redis.io/topics/data-types#sets
+[AUTH]: http://redis.io/commands/AUTH
+[set]:  http://redis.io/topics/data-types#sets
+

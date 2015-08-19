@@ -69,10 +69,12 @@ Todas operações retornam [401] se a [autenticação] fornecida não casa com a
 Variáveis de ambiente:
  * `AUTH`: credencias no formato `user:password`;
  * `REDIS_PASSWORD`: senha do Redis (opcional);
- * `REDIS_URL`:  uma URL no formato `redis://host:porta` (opcional, assume `redis://localhost:6379`).
+ * `REDIS`: uma URL de um servidor Redis no format `redis://usuario:senha@host:porta`, senha é opcional e já que [AUTH] pede somente senha `usuario` pode ser qualquer coisa.
 
 Chaves no Redis:
  * `vocabulary`: palavras (separadas por espaço, não é um [set]) que são casadas na busca;
  * `errors`: a distância *Levenshtein* tolerada pelo algoritmo de busca (quanto maior mais tolerante).
 
-[set]: http://redis.io/topics/data-types#sets
+[AUTH]: http://redis.io/commands/AUTH
+[set]:  http://redis.io/topics/data-types#sets
+
