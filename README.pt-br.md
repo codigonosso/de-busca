@@ -74,14 +74,12 @@ $ curl example.org/index/1337 -i -X DELETE -u "username:password"
 
 ## Configuração
 
-Variáveis de ambiente:
- * `AUTH`: credencias no formato `user:password`;
- * `REDIS_PASSWORD`: senha do Redis (opcional);
- * `REDIS`: uma URL de um servidor Redis no format `redis://usuario:senha@host:porta`, senha é opcional e já que [AUTH] pede somente senha `usuario` pode ser qualquer coisa.
+Existem as seguintes variáveis de ambiente a serem configuradas:
 
-Chaves no Redis:
- * `vocabulary`: palavras (separadas por espaço, não é um [set]) que são casadas na busca;
- * `errors`: a distância *Levenshtein* tolerada pelo algoritmo de busca (quanto maior mais tolerante). Assume `2` se não for configurado.
+ * `AUTH`: credencias no formato `user:password`;
+ * `ERRORS`: a distância *Levenshtein* tolerada pelo algoritmo de busca (quanto maior mais tolerante). Assume `2` se não for configurado.
+ * `REDIS`: uma URL de um servidor Redis no format `redis://usuario:senha@host:porta`, senha é opcional e já que [AUTH] pede somente senha `usuario` pode ser qualquer coisa.
+ * `VOCABULARY`: palavras (separadas por espaço, não é um [set]) que são casadas na busca;
 
 [AUTH]: http://redis.io/commands/AUTH
 [set]:  http://redis.io/topics/data-types#sets

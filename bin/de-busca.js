@@ -1,19 +1,9 @@
 #! /usr/bin/env node
 
-var client        = require('../lib/persistence/client')
-  , configuration = require('../lib/persistence/configuration')
+var connect       = require('../lib/persistence/connect')
+  , configuration = require('../lib/configuration')
   , web           = require('../lib/web')
 
-var redis = client(exit)
-configuration(redis, function (err, configuration) {
-
-  if (err) exit(err)
-  web(redis, configuration)
-
-})
-
-function exit (error) {
-  console.error(error)
-  process.exit(1)
-}
+connect(configuration)
+web(configuration)
 
