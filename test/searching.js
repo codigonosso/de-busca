@@ -7,7 +7,7 @@ describe('searching', function () {
     var query         = 'Visita deve consolidar o Brasil como maior aliado dos EUA na América Latina'
       , configuration = {
             vocabulary: 'argentina bolivia brasil chile colombia equador guiana paraguai peru suriname uruguai venezuela'
-          , errors:     0
+          , distance:   0
         }
 
     searching(query, configuration, function (matches) {
@@ -21,7 +21,7 @@ describe('searching', function () {
     var query         = 'Uruguai e Paraguai pedem fim de barreiras não tarifárias no Mercosul'
       , configuration = {
             vocabulary: 'argentina bolivia brasil chile colombia equador guiana paraguai peru suriname uruguai venezuela'
-          , errors:     0
+          , distance:   0
         }
 
     searching(query, configuration, function (matches) {

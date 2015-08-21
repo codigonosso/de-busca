@@ -79,7 +79,7 @@ $ curl example.org/index/1337 -i -X DELETE -u "username:password"
 There are the following environment variables to set:
 
  * `AUTH`: an `user:password` checked when the API is used;
- * `ERRORS`: the *Levenshtein distance* tolerance of the search algorithm (the higher the more tolerant it is). Assumes `2` if none is configured.
+ * `DISTANCE`: the *Levenshtein distance* tolerance of the search algorithm (the higher the more tolerant it is). Assumes `2` if none is configured.
  * `REDIS`: a Redis server URL in the format `redis://user:password@host:port`, password is optional and since [AUTH] only asks for a password `user` can be anything.
  * `VOCABULARY`: words (string separated by spaces, not a [set]) that are checked agaisnt when searching;
 
