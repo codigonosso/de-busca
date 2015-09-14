@@ -1,5 +1,5 @@
-var assert     = require('assert')
-  , searching  = require('../lib/searching')
+var assert = require('assert')
+  , search = require('../lib/searching')
 
 describe('searching', function () {
 
@@ -10,7 +10,7 @@ describe('searching', function () {
           , distance:   0
         }
 
-    searching(query, configuration, function (matches) {
+    search.matchWords(query, configuration, function (matches) {
       assert.deepEqual(matches, [ 'brasil' ])
       done()
     })
@@ -24,7 +24,7 @@ describe('searching', function () {
           , distance:   0
         }
 
-    searching(query, configuration, function (matches) {
+    search.matchWords(query, configuration, function (matches) {
       assert.deepEqual(matches, [ 'uruguai', 'paraguai' ])
       done()
     })
