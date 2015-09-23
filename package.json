@@ -25,6 +25,7 @@
   "description": "a Redis-backed Brazilian search engine",
   "devDependencies": {
     "coveralls": "~2.11.2",
+    "fakeredis": "^0.3.3",
     "istanbul": "^0.3.17",
     "mocha": "~2.2.5",
     "rewire": "~2.3.3"
