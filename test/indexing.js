@@ -15,14 +15,15 @@ Falar de amor em Itapuã')
     assert.deepEqual(keywords, {
         bom:     [ 0 ]
       , passar:  [ 1 ]
-      , tarde:   [ 2 ]
-      , itapua:  [ 3, 6, 9, 12 ]
-      , sol:     [ 4 ]
-      , arde:    [ 5 ]
-      , ouvindo: [ 7 ]
-      , mar:     [ 8 ]
-      , falar:   [ 10 ]
-      , amor:    [ 11 ]
+      , uma:     [ 2 ]
+      , tarde:   [ 3 ]
+      , itapua:  [ 4, 7, 10, 13 ]
+      , sol:     [ 5 ]
+      , arde:    [ 6 ]
+      , ouvindo: [ 8 ]
+      , mar:     [ 9 ]
+      , falar:   [ 11 ]
+      , amor:    [ 12 ]
     })
 
   })
